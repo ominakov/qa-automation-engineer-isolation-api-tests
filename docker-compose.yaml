@@ -95,6 +95,12 @@ services:
     container_name: "postgres-migrator-operations-api"
 
   # gateway-services
+  http-mock:
+    <<: *python-service
+    ports: [ "8003:8003" ]
+    command: "tests.mock.http.server"
+    container_name: "http-mock"
+
   http-gateway:
     <<: *python-service
     ports: [ "8001:8001" ]
