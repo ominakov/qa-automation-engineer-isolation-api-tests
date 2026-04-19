@@ -8,13 +8,6 @@ from tests.types.operations import OperationTestType, OperationTestStatus
 
 
 class OperationTestSchema(BaseModel):
-    """
-    Тестовая схема операции.
-
-    Описывает операцию так, как она возвращается
-    через синхронное API (HTTP / gRPC).
-    """
-
     model_config = ConfigDict(
         alias_generator=to_camel,
         populate_by_name=True,
@@ -32,13 +25,6 @@ class OperationTestSchema(BaseModel):
 
 
 class OperationEventTestSchema(BaseModel):
-    """
-    Схема события операции.
-
-    Используется для генерации событий,
-    которые отправляются в Kafka в тестах.
-    """
-
     type: OperationTestType = Field(default_factory=lambda: fake.enum(OperationTestType))
     status: OperationTestStatus = Field(default_factory=lambda: fake.enum(OperationTestStatus))
     amount: float = Field(default_factory=fake.amount)
@@ -50,18 +36,10 @@ class OperationEventTestSchema(BaseModel):
 
 
 class GetOperationResponseTestSchema(BaseModel):
-    """
-    Схема ответа API при получении одной операции.
-    """
-
     operation: OperationTestSchema
 
 
 class GetOperationsQueryTestSchema(BaseModel):
-    """
-    Схема query-параметров для запроса списка операций.
-    """
-
     model_config = ConfigDict(
         alias_generator=to_camel,
         populate_by_name=True,
@@ -73,8 +51,4 @@ class GetOperationsQueryTestSchema(BaseModel):
 
 
 class GetOperationsResponseTestSchema(BaseModel):
-    """
-    Схема ответа API при получении списка операций.
-    """
-
     operations: list[OperationTestSchema]

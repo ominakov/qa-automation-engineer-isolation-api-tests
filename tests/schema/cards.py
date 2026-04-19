@@ -11,10 +11,6 @@ from tests.types.cards import (
 
 
 class CardTestSchema(BaseModel):
-    """
-    Тестовая схема банковской карты.
-    """
-
     model_config = ConfigDict(
         alias_generator=to_camel,
         populate_by_name=True,
@@ -33,18 +29,10 @@ class CardTestSchema(BaseModel):
 
 
 class GetCardResponseTestSchema(BaseModel):
-    """
-    Схема ответа API при получении карты.
-    """
-
     card: CardTestSchema
 
 
 class GetCardsQueryTestSchema(BaseModel):
-    """
-    Схема query-параметров для запроса списка карт.
-    """
-
     model_config = ConfigDict(
         alias_generator=to_camel,
         populate_by_name=True,
@@ -54,8 +42,4 @@ class GetCardsQueryTestSchema(BaseModel):
 
 
 class GetCardsResponseTestSchema(BaseModel):
-    """
-    Схема ответа API при получении списка карт.
-    """
-
     cards: list[CardTestSchema]

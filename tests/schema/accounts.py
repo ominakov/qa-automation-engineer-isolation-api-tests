@@ -5,10 +5,6 @@ from tests.types.accounts import AccountTestType, AccountTestStatus
 
 
 class AccountTestSchema(BaseModel):
-    """
-    Тестовая схема банковского счёта.
-    """
-
     model_config = ConfigDict(
         alias_generator=to_camel,
         populate_by_name=True,
@@ -22,16 +18,8 @@ class AccountTestSchema(BaseModel):
 
 
 class GetAccountResponseTestSchema(BaseModel):
-    """
-    Схема ответа API при получении счёта.
-    """
-
     account: AccountTestSchema
 
 
 class GetAccountsResponseTestSchema(BaseModel):
-    """
-    Схема ответа API при получении списка счетов.
-    """
-
     accounts: list[AccountTestSchema]

@@ -8,9 +8,4 @@ class KafkaClientTestConfig(BaseModel):
 
     @property
     def bootstrap_servers(self) -> str:
-        """
-        Адрес Kafka-брокера в формате host:port.
-
-        Используется Kafka-продьюсерами в тестах.
-        """
         return f"{self.address}:{self.port}"

@@ -3,14 +3,6 @@ from pydantic.alias_generators import to_camel
 
 
 class UserTestSchema(BaseModel):
-    """
-    Тестовая схема пользователя.
-
-    Используется для описания пользователя
-    так, как он виден через API и контракты,
-    а не как он хранится внутри сервиса.
-    """
-
     model_config = ConfigDict(
         alias_generator=to_camel,
         populate_by_name=True,
@@ -25,8 +17,4 @@ class UserTestSchema(BaseModel):
 
 
 class GetUserResponseTestSchema(BaseModel):
-    """
-    Схема ответа API при получении пользователя.
-    """
-
     user: UserTestSchema
