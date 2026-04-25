@@ -21,6 +21,8 @@ class TestSettings(BaseSettings):
     gateway_http_client: HTTPClientTestConfig
     gateway_grpc_client: GRPCClientTestConfig
 
+    users_http_client: HTTPClientTestConfig
+
     operations_http_client: HTTPClientTestConfig
     operations_grpc_client: GRPCClientTestConfig
     operations_kafka_client: KafkaClientTestConfig
