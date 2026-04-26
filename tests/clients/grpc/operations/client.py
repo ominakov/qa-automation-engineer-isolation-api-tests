@@ -9,8 +9,6 @@ from contracts.services.operations.rpc_get_operation_pb2 import GetOperationRequ
 from contracts.services.operations.rpc_get_operations_pb2 import GetOperationsRequest, GetOperationsResponse
 from tests.clients.grpc.client import GRPCTestClient, build_grpc_test_channel
 from tests.config import test_settings
-from tests.context.base import RequestContext, build_grpc_test_metadata
-from tests.tools.fakers import fake
 from tests.tools.logger import get_test_logger
 
 
@@ -48,6 +46,6 @@ class OperationsGRPCTestClient(GRPCTestClient):
 def build_operations_grpc_test_client() -> OperationsGRPCTestClient:
     channel = build_grpc_test_channel(
         logger=get_test_logger("OPERATIONS_GRPC_TEST_CLIENT"),
-        config=test_settings.operations_http_client,
+        config=test_settings.operations_grpc_client,
     )
     return OperationsGRPCTestClient(channel=channel)

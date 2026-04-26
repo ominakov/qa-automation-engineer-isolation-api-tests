@@ -7,7 +7,7 @@ class GRPCServerTestConfig(BaseModel):
 
     @property
     def url(self):
-        return f"{self.address}:{self.port}"
+        return f"{str(self.address)}:{self.port}"
 
 
 class GRPCClientTestConfig(BaseModel):
@@ -17,4 +17,4 @@ class GRPCClientTestConfig(BaseModel):
 
     @property
     def url(self):
-        return f"{self.address}:{self.port}"
+        return f"{str(self.address)}:{self.port}"
