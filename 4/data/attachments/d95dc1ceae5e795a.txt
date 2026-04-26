@@ -1,0 +1,10 @@
+INFO     sqlalchemy.engine.Engine:base.py:1842 select pg_catalog.version()
+INFO     sqlalchemy.engine.Engine:base.py:1842 [raw sql] {}
+INFO     sqlalchemy.engine.Engine:base.py:1842 select current_schema()
+INFO     sqlalchemy.engine.Engine:base.py:1842 [raw sql] {}
+INFO     sqlalchemy.engine.Engine:base.py:1842 show standard_conforming_strings
+INFO     sqlalchemy.engine.Engine:base.py:1842 [raw sql] {}
+INFO     sqlalchemy.engine.Engine:base.py:2698 BEGIN (implicit)
+INFO     sqlalchemy.engine.Engine:base.py:1842 INSERT INTO operations (type, status, amount, user_id, card_id, account_id, category, created_at) VALUES (%(type)s, %(status)s, %(amount)s, %(user_id)s::UUID, %(card_id)s::UUID, %(account_id)s::UUID, %(category)s, %(created_at)s)
+INFO     sqlalchemy.engine.Engine:base.py:1842 [generated in 0.00014s] {'type': <OperationTestType.PURCHASE: 'PURCHASE'>, 'status': <OperationTestStatus.IN_PROGRESS: 'IN_PROGRESS'>, 'amount': 517.36, 'user_id': UUID('3e914295-4fb3-440a-8a17-766086de17b0'), 'card_id': UUID('907051d8-1fb9-404b-a0f6-bcd9ba4c4ebf'), 'account_id': UUID('de1dafd9-36fa-49e0-b553-76886cb2390e'), 'category': 'supermarkets', 'created_at': datetime.datetime(1973, 5, 9, 1, 4, 59, 708923)}
+INFO     sqlalchemy.engine.Engine:base.py:2701 ROLLBACK
