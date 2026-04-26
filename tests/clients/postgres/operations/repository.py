@@ -14,6 +14,7 @@ class OperationsPostgresTestRepository(PostgresTestRepository):
 
         return self.create(
             OperationsTestModel(
+                id=fake.uuid(),
                 type=OperationTestType.PURCHASE,
                 status=OperationTestStatus.IN_PROGRESS,
                 amount=fake.amount(),
