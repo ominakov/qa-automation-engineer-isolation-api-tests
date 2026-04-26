@@ -3,7 +3,7 @@ from uuid import UUID
 import allure
 from httpx import Response, QueryParams
 
-from tests.clients.http.client import HTTPTestClient, build_http_test_client
+from tests.clients.http.client import HTTPTestClient
 from tests.config import test_settings
 from tests.schema.operations import GetOperationsQueryTestSchema, GetOperationResponseTestSchema, \
     GetOperationsResponseTestSchema
@@ -45,7 +45,7 @@ class OperationsHTTPTestCliet(HTTPTestClient):
 
 
 def build_operations_http_test_client() -> OperationsHTTPTestCliet:
-    client = build_http_test_client(
+    client = HTTPTestClient.build_http_test_client(
         logger=get_test_logger("OPERATIONS_HTTP_TEST_CLIENT"),
         config=test_settings.operations_http_client,
     )

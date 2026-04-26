@@ -3,7 +3,7 @@ import uuid
 import allure
 from httpx import Response
 
-from tests.clients.http.client import HTTPTestClient, build_http_test_client
+from tests.clients.http.client import HTTPTestClient
 from tests.config import test_settings
 from tests.context.base import RequestContext
 from tests.schema.gateway import (
@@ -53,7 +53,7 @@ class GatewayHTTPTestClient(HTTPTestClient):
 
 
 def build_gateway_http_test_client() -> GatewayHTTPTestClient:
-    client = build_http_test_client(
+    client = HTTPTestClient.build_http_test_client(
         logger=get_test_logger("GATEWAY_HTTP_TEST_CLIENT"),
         config=test_settings.gateway_http_client,
     )
