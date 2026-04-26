@@ -1,2 +1,0 @@
-INFO     GATEWAY_GRPC_TEST_CLIENT:logger_interceptor.py:12 REQUEST: /contracts.services.gateway.GatewayService/GetUserDetails
-INFO     GATEWAY_GRPC_TEST_CLIENT:logger_interceptor.py:14 RESPONSE: /contracts.services.gateway.GatewayService/GetUserDetails

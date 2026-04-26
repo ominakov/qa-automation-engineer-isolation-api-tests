@@ -1,6 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","20003","[gRPC] Get user details. User with active credit card account","tests.suites.gprc","Sun Apr 26 13:23:50 UTC 2026","broken","Sun Apr 26 13:24:10 UTC 2026","TestGatewayGRPC","test_gateway","",""
-"","30503","[gRPC][Kafka] Operation events. In progress purchase operation","tests.suites.gprc","Sun Apr 26 13:24:31 UTC 2026","broken","Sun Apr 26 13:25:01 UTC 2026","TestOperationsGRPC","test_operations","",""
-"","19914","[gRPC][Kafka] Operation events. Completed purchase operation","tests.suites.gprc","Sun Apr 26 13:25:01 UTC 2026","broken","Sun Apr 26 13:25:21 UTC 2026","TestOperationsGRPC","test_operations","",""
-"","19880","[gRPC] Get account details. User with active debit card account","tests.suites.gprc","Sun Apr 26 13:24:11 UTC 2026","broken","Sun Apr 26 13:24:30 UTC 2026","TestGatewayGRPC","test_gateway","",""
-"","135549","[gRPC][Postgres] Filter by card id. In progress purchase operation","tests.suites.gprc","Sun Apr 26 13:25:21 UTC 2026","broken","Sun Apr 26 13:27:37 UTC 2026","TestOperationsGRPC","test_operations","",""
